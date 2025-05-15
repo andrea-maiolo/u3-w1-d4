@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Card, Badge } from "react-bootstrap";
+import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
   state = {
@@ -8,7 +9,6 @@ class SingleBook extends Component {
 
   handleSelected = () => {
     this.setState({ selected: this.state.selected ? false : true });
-    console.log(this.state.selected);
   };
 
   render() {
@@ -23,6 +23,7 @@ class SingleBook extends Component {
           <Card.Text className="fs-6">
             Category <Badge bg="success">{this.props.book.category}</Badge>
           </Card.Text>
+          {this.state.selected && <CommentArea bookId={this.props.book.asin} />}
         </Card.Body>
       </Card>
     );
