@@ -2,10 +2,13 @@ import { Component } from "react";
 import { ListGroup } from "react-bootstrap";
 
 class SingleComment extends Component {
+  state = {
+    commentObj: this.props.commentObj,
+  };
   render() {
     return (
       <ListGroup.Item>
-        {this.props.commentObj.comment} - rate {this.props.commentObj.rate}/5
+        {this.state.commentObj.comment} - rate {this.state.commentObj.rate}/5
       </ListGroup.Item>
     );
   }

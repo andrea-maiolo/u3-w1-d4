@@ -31,12 +31,10 @@ class CommentArea extends Component {
   }
 
   render() {
-    console.log(this.state.arrayOfComments);
-
     return (
       <>
         <CommentsList arrayOfComments={this.state.arrayOfComments} />
-        <AddComment />
+        <AddComment bookId={this.props.bookId} />
       </>
     );
   }
