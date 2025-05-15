@@ -70,7 +70,7 @@ class AddComment extends Component {
           </Form.Select>
         </Form.Group>
         <Button variant="info" type="submit">
-          Prenota
+          Posta il commento
         </Button>
       </Form>
     );
